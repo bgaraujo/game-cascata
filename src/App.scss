@@ -1,0 +1,111 @@
+.App{
+  background-color: #fffce9;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  .borda{
+    background-color: #544a51;
+    width: 90%;
+    margin-top: 10%;
+    aspect-ratio: 4/3;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tela{
+      width: 80%;
+      height: 80%;
+      background-color: #bfdb60;
+      align-items: center;
+    }
+  }
+  .controles{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    .direcional{
+      flex-grow: 3;
+      display: flex;
+      flex-direction: row;
+      aspect-ratio: 1/1;
+      button{
+        aspect-ratio: 1/1;
+        background-color: #544a51;
+        border: 1px solid #000;
+        border-radius: 2px;
+        width: 100%;
+      }
+      .lado{
+        display: flex;
+        align-items: center;
+        flex-grow: 3;
+      }
+      .centro{
+        flex-grow: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+    .divisao{
+      flex-grow: 4;
+    }
+    .botoes{
+      flex-grow: 3;
+      display: flex;
+      .botaoA{
+        flex-grow: 1;
+        padding-top: 30px;
+      }
+      .botaoB{
+        flex-grow: 1;
+      }
+      button{
+        width: 90%;
+        aspect-ratio: 1/1;
+        background-color: #9f295d;
+        border: 1px solid #000;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .game{
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+    width: 100%;
+    .linha{
+      display: flex;
+      flex-direction:row;
+      flex-wrap:nowrap;
+      height: 9%;
+      .coluna{
+        flex: 1;
+        width: 20%;
+        text-align: center;
+      }
+    }
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      &.active_false{
+        opacity: 0.2;
+      }
+    }
+    .header_bar{
+      height: 10%;
+      display: flex;
+      justify-content: space-between;
+      img{
+        height: 50%;
+      }
+    }
+  }
+}

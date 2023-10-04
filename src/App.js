@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Game from './Game';
 
 function App() {
+
+const Tela = () => {
+  return (
+    <div className='borda'>
+      <div className='tela'>
+        <Game />
+      </div>
+    </div>
+  );
+}
+
+const Controle = () => {
+  return (
+    <div className="controles">
+      <div className="direcional">
+        <div className="lado">
+          <button className="esq"/>
+        </div>
+        <div className="centro">
+          <button className="cima"/>
+          <button className="baixo"/>
+        </div>
+        <div className="lado">
+          <button className="dir"/>
+        </div>
+      </div>
+      <div className="divisao"></div>
+      <div className="botoes">
+        <div className="botaoA">
+          <button>A</button>
+        </div>
+        <div className="botaoB">
+          <button>B</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Tela/>
+      <Controle/>
     </div>
   );
 }
